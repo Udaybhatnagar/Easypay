@@ -22,7 +22,7 @@ export const Users = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/v1/user/bulk?filter=" + debouncedFilter)
+      .get("https://easypay-backend-8bw4.onrender.com/api/v1/user/bulk?filter=" + debouncedFilter)
       .then((response) => {
         setUsers(response.data.user);
       });
