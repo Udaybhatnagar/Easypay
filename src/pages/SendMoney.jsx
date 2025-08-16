@@ -16,7 +16,7 @@ export const SendMoney = () => {
   useEffect(() => {
     const fetchBalance = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/account/balance", {
+        const res = await axios.get("https://easypay-backend-8bw4.onrender.com/api/v1/account/balance", {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
           },
@@ -44,7 +44,7 @@ export const SendMoney = () => {
     setLoading(true);
     try {
       await axios.post(
-        "http://localhost:3000/api/v1/account/transfer",
+        "https://easypay-backend-8bw4.onrender.com/api/v1/account/transfer",
         { to: id, amount },
         {
           headers: {

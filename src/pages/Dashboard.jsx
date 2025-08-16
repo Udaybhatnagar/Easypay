@@ -7,7 +7,7 @@ import axios from "axios";
 
 export const Dashboard = () => {
     const [balcae,setbalance]=useState(0);
-      axios.get("http://localhost:3000/api/v1/account/balance",{
+      axios.get("https://easypay-backend-8bw4.onrender.com/api/v1/account/balance",{
 
        headers:{
         Authorization: "Bearer " + localStorage.getItem("token")
